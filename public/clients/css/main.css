@@ -417,7 +417,7 @@ Input, textarea : 14px/1.6 '', Arial, sans-serif;
 }
 
 .main-menu > li > .sub-menu {
-  top:100%;
+  top:80%;
   left: 0;
 }
 

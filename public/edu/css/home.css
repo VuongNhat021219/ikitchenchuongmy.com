@@ -191,6 +191,12 @@
     color: var(--primary-color);
     text-decoration: none;
 }
+.hover__1:hover{
+    color: var(--white-color)!important ; 
+    text-decoration: none!important ; 
+    background-color: #333335;
+    border-radius: 0.4rem;
+}
 
 
 .bestselling__product-rate {
@@ -591,14 +597,14 @@ section.product__love{
 }
 
 .posts__item-title {
-    font-size: 1.5rem;
+    font-size: 1.0rem;
     color: var(--text-color);
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 2;
     text-overflow: ellipsis;
     overflow: hidden;
-    height: 7.4rem;
+    height: 4.4rem;
 }
 
 .posts__item-title:hover{

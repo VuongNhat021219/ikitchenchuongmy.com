@@ -26,12 +26,14 @@
                     </li>
 
                     <li>
-                        <a href="{{ route('pro.index') }}">Sản Phẩm</a>
+                        <a href="#">Sản Phẩm</a>
                         <span class="badge badge-danger badge-pill float-right">New</span>
-                        <ul class="sub-menu" style="background-color: rgba(255,255,255,0.8);border-radius: 30px;">
-                           @foreach ($danhmuc as $danhmuc)
+                        <ul class="sub-menu" style="background-color: rgba(255,255,255,1);border-radius: 30px;">
+                        
+                        <li ><a class="hover__1"  href="{{ route('pro.index') }}" >Tất Cả Sản Phẩm</a></li>
+                            @foreach ($danhmuc as $danhmuc)
                                
-                            <li><a href="{{ route('pro.timkiem',$danhmuc->id).'-'.\Str::slug($danhmuc->name,'-').'.html ' }}">{{ $danhmuc->name }}</a></li>
+                            <li><a class="hover__1"  href="{{ route('pro.timkiem',$danhmuc->id).'-'.\Str::slug($danhmuc->name,'-').'.html ' }}">{{ $danhmuc->name }}</a></li>
                            @endforeach
 
                            

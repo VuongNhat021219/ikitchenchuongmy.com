@@ -10,7 +10,7 @@
                 @foreach ($danhmuc as $dm)
                     
                 <li class="bor18">
-                    <a href="#" class="dis-block stext-115 cl6 hov-cl1 trans-04 p-tb-8 p-lr-4">
+                    <a href="{{  route('pro.timkiem',$dm->id).'-'.\Str::slug($dm->name,'-').'.html '  }}" class="dis-block stext-115 cl6 hov-cl1 trans-04 p-tb-8 p-lr-4">
                         {{ $dm->name }}
                     </a>
                 </li>
@@ -29,12 +29,12 @@
                 @foreach ($dsspleft as $sp)
                     
                 <li class="flex-w flex-t p-b-30">
-                    <a href="#" class="wrao-pic-w size-214 hov-ovelay1 m-r-20">
+                    <a href="{{ route('pro.show', $sp->id) }}-{{ $sp->slug }}.html" class="wrao-pic-w size-214 hov-ovelay1 m-r-20">
                         <img src="uploads/images/{{ $sp->image }}" width="90px" height="110px" alt="PRODUCT">
                     </a>
 
                     <div class="size-215  flex-col-t p-t-8">
-                        <a href="#" class="stext-116 cl8 hov-cl1 trans-04">
+                        <a href="{{ route('pro.show', $sp->id) }}-{{ $sp->slug }}.html" class="stext-116 cl8 hov-cl1 trans-04">
                             {{ $sp->name }}
                         </a>
 

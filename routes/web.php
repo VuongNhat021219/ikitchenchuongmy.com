@@ -39,28 +39,27 @@ Route::get('/',[HomeController::class,'index'] )->name('home.index');
 Route::get('/home/search',[HomeController::class,'search'] )->name('home.search');
 
 //lien he
-Route::get('/contact',[ContactClientController::class,'index'] )->name('contactClient.index');
+Route::get('/lien-he',[ContactClientController::class,'index'] )->name('contactClient.index');
 
 
 //show sản phẩm và cart
-Route::get('/product',[SpController::class,'index'] )->name('pro.index');
+Route::get('/san-pham',[SpController::class,'index'] )->name('pro.index');
 Route::get('/{id}',[SpController::class,'show'])->name('pro.show');
-Route::post('/product/card',[SpController::class,'productCard'] )->name('pro.card');
-Route::get('/product/showCard',[SpController::class,'showCard'] )->name('pro.showcard');
-Route::post('/product/updateCard',[SpController::class,'update'] )->name('pro.updatecard');
-Route::get('/product/deleteCard/{id}',[SpController::class,'destroy'] )->name('pro.deletecard');
-Route::get('/product/checkout',[SpController::class,'checkout'] )->name('pro.checkout');
-Route::post('/product/checkout/create',[SpController::class,'createCheckout'] )->name('pro.createCheckout');
-Route::get('/product/checkout/ok',[SpController::class,'checkoutok'] )->name('pro.checkoutok');
+Route::post('/san-pham/gio-hang',[SpController::class,'productCard'] )->name('pro.card');
+Route::get('/san-pham/hien-thi-gio-hang',[SpController::class,'showCard'] )->name('pro.showcard');
+Route::post('/san-pham/updateCard',[SpController::class,'update'] )->name('pro.updatecard');
+Route::get('/san-pham/deleteCard/{id}',[SpController::class,'destroy'] )->name('pro.deletecard');
+Route::get('/san-pham/checkout',[SpController::class,'checkout'] )->name('pro.checkout');
+Route::post('/san-pham/checkout/create',[SpController::class,'createCheckout'] )->name('pro.createCheckout');
+Route::get('/san-pham/checkout/success',[SpController::class,'checkoutok'] )->name('pro.checkoutok');
 
 
 //tim kiem san pham
-Route::get('/timkiem/{id}',[SpController::class,'timsanphamtheodanhmuc'])->name('pro.timkiem');
+Route::get('/san-pham/{id}',[SpController::class,'timsanphamtheodanhmuc'])->name('pro.timkiem');
 
 //show blog
-Route::get('/baiviet/tintuc',[BlogController::class,'index'] )->name('blogclient.index');
-Route::get('/blog/{id}',[BlogController::class,'show'] )->name('blogclient.show');
-
+Route::get('/bai-viet/tin-tuc',[BlogController::class,'index'] )->name('blogclient.index');
+Route::get('/bai-viet/{id}',[BlogController::class,'show'] )->name('blogclient.show');
 
 
 //login

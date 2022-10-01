@@ -57,7 +57,7 @@
                      <ul class="product__list hide-on-mobile">
                          @foreach ($danhmuc as $danhmuc)
                              <li class="product__item product__item--active">
-                                 <a href="#" class="product__link">{{ $danhmuc->name }}</a>
+                                 <a href="{{ route('pro.timkiem',$danhmuc->id).'-'.\Str::slug($danhmuc->name,'-').'.html ' }}" class="hover__1 product__link">{{ $danhmuc->name }}</a>
                              </li>
                          @endforeach
 
