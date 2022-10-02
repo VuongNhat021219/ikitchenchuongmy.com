@@ -4,6 +4,7 @@
         <li class="dropdown notification-list">
             <a href="{{ route('home.index') }}" class="btn btn-confirm" style="color:#000; margin-top:15px; background-color: bisque;border-radius:30px">Chuyển Qua Trang Web</a>
         </li>
+        
 
         
 
@@ -47,6 +48,7 @@
                     height="22">
             </span>
         </a>
+        
 
         <a href="index.html" class="logo text-center logo-light">
             <span class="logo-lg">
@@ -71,7 +73,21 @@
                 <i class="mdi mdi-menu"></i>
             </button>
         </li>
-
+        <li class="d-none d-lg-block">
+            <form class="app-search" action="{{ route('product.searchPro') }}" method="GET">
+                @csrf
+                <div class="app-search-box">
+                    <div class="input-group">
+                        <input type="text" class="form-control" name="search" placeholder="Search...">
+                        <div class="input-group-append">
+                            <button class="btn" type="submit">
+                                <i class="fas fa-search"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </li>
         
     </ul>
 </div>

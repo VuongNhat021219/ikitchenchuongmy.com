@@ -81,6 +81,7 @@ Route::middleware('auth')->prefix('admin')->group(function () {
     Route::get('/product/edit/{id}', [ProdController::class,'edit'])->name('product.edit');
     Route::put('/product/update/{id}', [ProdController::class,'update'])->name('product.update');
     Route::delete('/product/destroy/{id}', [ProdController::class,'destroy'])->name('product.destroy');
+    Route::get('/product/searchPro', [ProdController::class,'searchPro'])->name('product.searchPro');
 
     Route::get('/blog',[BlogAdminController::class,'index'])->name('blog.index');
     Route::get('/blog/create',[BlogAdminController::class,'create'])->name('blog.create');

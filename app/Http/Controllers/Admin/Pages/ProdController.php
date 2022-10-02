@@ -215,4 +215,12 @@ class ProdController extends Controller
         return redirect()->back();
         
     }
+
+    //tim kiem
+    public function searchPro(Request $request){
+        $keywords = $_GET['search'];
+       $pro = $this->product->where('name','LIKE','%'.$keywords.'%')->where('name','LIKE','%'.$keywords.'%')->get();
+
+       return view('admin.layouts.search.searchPro',compact('pro'));
+    }
 }
