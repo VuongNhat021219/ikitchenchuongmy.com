@@ -104,7 +104,7 @@ class ProdController extends Controller
        $this->product->images2 = $nameImages2;
        $this->product->images3 = $nameImages3;
        $this->product->description = $request->description;
-       $this->product->slug = Str::of($request->name.'-'.mt_rand())->slug('-');
+       $this->product->slug = Str::of($request->name)->slug('-');
        $this->product->status = $request->radio;
         
        $this->product->save();
@@ -195,7 +195,7 @@ class ProdController extends Controller
        $product->images2 = $nameImages2;
        $product->images3 = $nameImages3;
        $product->description = $request->description;
-       $product->slug = Str::of($request->name.'-'.mt_rand())->slug('-');
+       $product->slug = Str::of($request->name)->slug('-');
        $product->status = $request->radio;
         $product->save();
        return redirect()->route('product.index');

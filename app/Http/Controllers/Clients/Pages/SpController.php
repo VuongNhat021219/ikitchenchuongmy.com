@@ -41,8 +41,9 @@ class SpController extends Controller
     {
 
         $product = $this->product->find($id);
-        $cate = $product->categorymodel->name;
-        return view('client.pages.chitietPro', compact('product', 'cate'));
+        // $cate = $product->categorymodel->name;
+        // dd($cate);
+        return view('client.pages.chitietPro', compact('product'));
     }
 
     // cart-----------------------
